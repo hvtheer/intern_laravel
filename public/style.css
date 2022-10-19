@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    background-color: rgb(176, 176, 176);
+    text-align: center;
+    padding-top: 15px;
+}
+
+.sidebar {
+    display: flex;
+    height: 750px;
+    position: relative;
+    background-color: #DAE8FC;
+    float: left;
+    border: 2px solid #6C8EBF;
+    padding-top: 100px;
+    padding-left: 15px;
+}
+
+.list .category {
+    font-size: 25px;
+}
+
+.list p a {
+    text-decoration: none;
+    margin-left:15px;
+    color: black;
+}
+
+.content {
+    position: relative;
+    float: left;
+    height: 750px;
+    background-color: white;
+}
+
+.card {
+    margin: 50px auto;
+    padding-bottom:15px;
+}
+
+.bi .bi-person {
+    width: 50px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(176, 176, 176);
+    text-align: center;
+    padding: 15px;
+}
