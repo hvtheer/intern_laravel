@@ -39,7 +39,7 @@ class UserRequest extends FormRequest
                 'required',
                 'string',
                 'min:8',
-                'regex:/[@$!%*#?&]/',
+                'regex:/[@#$%&*]/',
                 'regex:/[0-9]/',
                 'required_with:password_confirm',
                 'same:password_confirm',
