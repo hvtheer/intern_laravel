@@ -29,7 +29,6 @@
                         <label for="InputPasswordConfirm">Password Confirm</label>
                         <input type="password" class="form-control" id="InputPasswordConfirm" name="password_confirm" value="{{ old('password_confirm')}}">
                     </div>
-
                 </div>
             </div>
 
