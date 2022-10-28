@@ -78,7 +78,7 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
 
-            <div class="btn-add text-lg-center mt-3">
+            <div class="text-lg-center mt-3">
                 <button type="submit" class="btn btn-primary btn-sm rounded-pill w-25">Save</button>
                 <button type="submit" class="btn btn-secondary btn-sm rounded-pill w-25">Reset</button>
             </div>

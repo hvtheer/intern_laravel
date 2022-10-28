@@ -13,6 +13,8 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function () {
     Route::resource('user', UserController::class);
+    Route::get('user/mail/form', [UserController::class, 'formSend'])->name('form');
+    Route::post('user/mail/form', [UserController::class, 'sendMail'])->name('send');
     Route::resource('role', RoleController::class);
     Route::resource('permission', PermissionController::class);
     Route::resource('product', ProductController::class);
