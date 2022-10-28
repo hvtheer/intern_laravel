@@ -52,15 +52,17 @@ class UserController extends Controller
     {
         $users = $this->getSessionUsers();
         $email = $request->email;
+        $attachment = null;
+        $attachment = $request->file('attachment');
 
         if ($email == 'all'){
             foreach ($users as $user) {
-                $this->mailService->sendInform($user);
+                $this->mailService->sendInform($user, $attachment);
             };
         }
         else {
             $user = $users->firstWhere('email', $email);
-            $this->mailService->sendInform($user);
+            $this->mailService->sendInform($user, $attachment);
         }
 
         return redirect()->back()->with('message',

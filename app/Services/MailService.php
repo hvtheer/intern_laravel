@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Mail;
 
 class MailService
 {
-    public function sendInform($user)
+    public function sendInform($user, $attachment)
     {
-        Mail::to($user['email'])->send(new InformUserProfile($user));
+        Mail::to($user['email'])->send(new InformUserProfile($user, $attachment));
     }
 }

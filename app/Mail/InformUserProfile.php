@@ -14,9 +14,10 @@ class InformUserProfile extends Mailable
     protected $user;
     protected $attachment;
 
-    public function __construct($user)
+    public function __construct($user, $attachment)
     {
         $this->user = $user;
+        $this->attachment = $attachment;
     }
 
     public function build()
@@ -24,6 +25,12 @@ class InformUserProfile extends Mailable
         $mail = $this->view('admin.user.mail.inform', [
             'user' => $this->user,
         ]);
+
+        if ($this->attachment) {
+            $mail->attach($this->attachment, [
+                'as' => $this->attachment->getClientOriginalName(),
+            ]);
+        }
 
         return $mail;
     }
